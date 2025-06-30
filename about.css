@@ -1,0 +1,343 @@
+* { margin: 0;
+ box-sizing: border-box;
+ transition: 0.45;}
+
+ body { display: grid;
+ grid-template-columns: 90px 1fr;
+ height: 100vh;}
+
+ #header {
+ display: grid;
+ grid-template-rows: 90px 1fr;}
+
+ #checkbox{
+    position: absolute;
+    opacity: 0;
+    height: 90px;
+    width: 90px;
+    left:-1px;
+    top:0px;
+    z-index: 999;
+    cursor: pointer;
+ }
+
+ #menu { 
+    width: 100%;
+    height: 90px;
+    padding-top: 23px;
+    font-size: 30px;
+    text-align: center;
+    color: #fff;
+    background: #0f0f0f;
+    cursor: pointer;}
+
+#social { display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+svg{ margin-bottom: 50px;
+width: 18px;
+height: 18px;}}
+
+.ti-facebook{margin-bottom: 50px;}
+.ti-twitter-alt{margin-bottom: 50px;}
+.ti-linkedin{margin-bottom: 50px;}
+.ti-instagram{margin-bottom: 50px;}
+
+.side-menu-wrapper{
+    position: fixed;
+    width: 270px;
+    height: 100%;
+    left: -280px;
+    top: 0;
+    overflow-y: auto;
+    box-shadow: 14px 0px 103px rgba(0, 0, 0, 0.08);
+    background-color: #fff;
+    z-index: 99;
+    opacity: 0;
+    transition: 0.3s;
+}
+input[type=checkbox]:checked~.side-menu-wrapper{
+    left: 0;
+    opacity: 1;
+}
+
+.side-menu-wrapper .sm-header{
+    display:flex;}
+
+.menu-close{
+    width: 90px;
+    height: 90px;
+    padding-top: 23px;
+    font-size: 30px;
+    text-align: center;
+    color: #fff;
+    background: #0f0f0f;
+    cursor: pointer;}
+
+.site-logo{
+    background: #2916e0;
+    width: calc(100% - 90px);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -moz-justify-content: center;
+    -ms-justify-content: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -ms-flex-pack: center;
+    -moz-align-items: center;
+    -ms-align-items: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.main-menu{
+    height: calc(100% - 160px);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -moz-justify-content: center;
+    -ms-justify-content: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -ms-flex-pack: center;
+    -moz-align-items: center;
+    -ms-align-items: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.main-menu ul{
+    list-style: none;
+    text-align: center;
+    padding-left: 0px;
+}
+.main-menu ul li{
+    display: block;
+    margin-bottom: 30px;
+}
+
+.main-menu ul li a{
+    display: block;
+    font-size: 30px;
+    font-weight: 600;
+    color: #b2b2b2;
+    -webkit-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s;
+    text-decoration: none;
+    background-color: transparent;
+    font-family: "Montserrat", sans-serif;
+}
+
+.main-menu ul li a:hover{
+    color: #2916e0;
+}
+
+.sm-footer{
+    position: absolute;
+    left:  0;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    padding: 0 15px;
+}
+
+.sm-footer .sm-socail a 
+{
+    display: inline-block;
+    font-size: 18px;
+    color: #b2b2b2;
+    margin-right: 25px;
+    margin-bottom: 10px;
+}
+
+
+.copyright-text
+{
+    font-size: 16px;
+    font-weight: 500;
+    color: #b2b2b2;
+    padding-bottom: 40px;
+    font-family: "Montserrat", sans-serif;
+}
+
+.about-section{
+    height:100%;
+}
+
+.about-section .about-wrap
+{
+    height: 100%;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+
+}
+
+.about-section .about-left
+{
+    background: #2916e0;
+    -ms-flex: 0 0 47%;
+    -webkit-box-flex: 0;
+    flex: 0 0 47%;
+    max-width: 47%;
+    padding: 0 15px;
+}
+.about-img
+{
+    text-align: center;
+    background-image: url(../img/about-bg.png);
+    background-repeat: no-repeat;
+    background-size: inherit;
+    background-position: center center;
+}
+.about-img img
+{
+    width: 515px;
+    height: 515px;
+    border-radius: 50%;
+    margin: 82px auto 50px;
+
+}
+
+.profile-text
+{
+    max-width: 550px;
+    margin: 0 auto;
+    padding-bottom: 40px;
+
+}
+
+.text-white
+{
+color: #fff ;
+}
+.profile-text h2
+{
+font-size: 36px;
+font-family: "Montserrat", sans-serif;
+font-weight: 500;
+}
+
+.profile-text p
+{
+font-size: 15px;
+line-height: 1.8;
+font-family: "Montserrat", sans-serif;
+padding-top: 20px;
+margin-bottom: 30px;
+}
+
+.profile-text .profile-btn{
+    display: inline-block;
+    min-width: 160px;
+    padding: 9px 10px;
+    margin-bottom: 10px;
+    margin-right: 28px;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 500;
+    text-align: center;
+    border-radius: 50px;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    font-family: "Montserrat", sans-serif;
+}
+
+.profile-text .profile-email{
+    display: inline-block;
+    font-style: italic;
+    font-size: 16px;
+    color: #fff;
+    text-decoration: underline;
+    font-family: "Montserrat", sans-serif;
+}
+
+.about-section .about-right{
+    -webkit-box-flex: 0;
+    flex: 0 0 53%;
+    max-width: 53%;
+    padding: 0 15px;
+}
+
+.about-text{
+    max-width: 810px;
+    margin: 0 auto;
+    padding: 18px 0 50px;
+}
+.about-text h2{
+    display: inline-block;
+    padding-bottom: 11px;
+    border-bottom: 3px solid #2916e0;
+    margin-bottom: 19px;
+    font-size: 36px;
+    font-family: "Montserrat", sans-serif;
+}
+
+.about-text p{
+  line-height: 1.6;
+  margin-bottom: 9px;
+  font-size: 15px;
+  color: #636363;
+  line-height: 1.8;
+  margin-top: 0px;
+  margin-bottom: 1rem;
+  font-family: "Montserrat", sans-serif;
+}
+
+.skill-warp{
+    position:fixed;
+    top:79%;
+    left:54%;
+    max-width: 930px;
+    margin: 0 auto;
+    text-align: center;
+    
+}
+
+
+
+.row-circle{
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;}
+
+.col-lg{
+flex: 0 0 25%;
+max-width: 40%;
+}
+
+.circle-item{
+    margin-bottom: 30px;
+}
+
+.circle-progress{
+    text-align: center;
+    display: inline-block;
+    position: relative;
+    margin-bottom: 10px;
+    width: 100px;
+    height: 100px;
+    border-radius:50% ;
+    border: solid blue 5px;
+}
+.circle-progress canvas{
+    transform: rotate(90deg);
+}
+.circle-progress .progress-info{
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    margin-top: -10px;
+}
+.circle-progress .progress-info h2 {
+    font-size: 16px;
+    line-height: 1;
+    font-weight: 600;
+    font-family: "Montserrat", sans-serif;
+}
+
